@@ -1,0 +1,551 @@
+{
+  "autores": [
+    "Catarina Pimentel",
+    "Hafiz Costa"
+  ],
+  "etapa1_subarranjo_soma_maxima": [
+    {
+      "id": "E1-01",
+      "nome": "Vetor contendo apenas valores negativos (Caso de Borda Obrigatório 1)",
+      "justificativa": "Verifica se o algoritmo não retorna 0 indevidamente quando todas as variações diárias são negativas; deve retornar o maior elemento isolado (menos negativo) e seus respectivos índices.",
+      "entrada_n": 6,
+      "entrada_vetor": [
+        -15,
+        -8,
+        -23,
+        -3,
+        -12,
+        -9
+      ],
+      "saida_esperada": {
+        "soma_maxima": -3,
+        "inicio": 3,
+        "fim": 3
+      }
+    },
+    {
+      "id": "E1-02",
+      "nome": "Vetor contendo apenas valores negativos com empate (Borda Negativos + Empate)",
+      "justificativa": "Combina dois casos de borda: todos os valores negativos e múltiplos elementos empatados com o maior valor (-4 nos índices 1 e 4). Pela regra determinística de desempate (menor índice de início), deve retornar [1, 1].",
+      "entrada_n": 5,
+      "entrada_vetor": [
+        -10,
+        -4,
+        -7,
+        -12,
+        -4
+      ],
+      "saida_esperada": {
+        "soma_maxima": -4,
+        "inicio": 1,
+        "fim": 1
+      }
+    },
+    {
+      "id": "E1-03",
+      "nome": "Vetor de tamanho 1 positivo (Caso de Borda Obrigatório 2)",
+      "justificativa": "Testa a condição de parada imediata da recursão (esq == dir) com um único elemento positivo.",
+      "entrada_n": 1,
+      "entrada_vetor": [
+        42
+      ],
+      "saida_esperada": {
+        "soma_maxima": 42,
+        "inicio": 0,
+        "fim": 0
+      }
+    },
+    {
+      "id": "E1-04",
+      "nome": "Vetor de tamanho 1 negativo (Caso de Borda Obrigatório 2 - Variante)",
+      "justificativa": "Testa o caso base mínimo (n = 1) quando o único dia registrado teve queda no preço da ação.",
+      "entrada_n": 1,
+      "entrada_vetor": [
+        -17
+      ],
+      "saida_esperada": {
+        "soma_maxima": -17,
+        "inicio": 0,
+        "fim": 0
+      }
+    },
+    {
+      "id": "E1-05",
+      "nome": "Empate entre intervalos disjuntos com a mesma soma máxima (Caso de Borda Obrigatório 3)",
+      "justificativa": "Os subarranjos [0..1] = (6+4=10) e [3..4] = (3+7=10) possuem a mesma soma máxima (10), separados por uma queda brusca (-25). O critério de desempate seleciona o primeiro intervalo [0, 1].",
+      "entrada_n": 5,
+      "entrada_vetor": [
+        6,
+        4,
+        -25,
+        3,
+        7
+      ],
+      "saida_esperada": {
+        "soma_maxima": 10,
+        "inicio": 0,
+        "fim": 1
+      }
+    },
+    {
+      "id": "E1-06",
+      "nome": "Empate por elementos nulos nas extremidades (Mesmo início, comprimentos diferentes)",
+      "justificativa": "Avalia o segundo nível de desempate: os intervalos [1..2] (5+7=12) e [1..3] (5+7+0=12) têm mesma soma e mesmo início (1). O critério de menor índice final escolhe o intervalo mais enxuto [1, 2].",
+      "entrada_n": 5,
+      "entrada_vetor": [
+        -3,
+        5,
+        7,
+        0,
+        -4
+      ],
+      "saida_esperada": {
+        "soma_maxima": 12,
+        "inicio": 1,
+        "fim": 2
+      }
+    },
+    {
+      "id": "E1-07",
+      "nome": "Subarranjo ótimo cruzando exatamente a mediana (Clássico CLRS)",
+      "justificativa": "Instância clássica de Cormen et al. (16 dias) em que o subarranjo ótimo [7..10] = (18 + 20 - 7 + 12 = 43) cruza o ponto médio da divisão principal, validando a etapa de combinação O(n).",
+      "entrada_n": 16,
+      "entrada_vetor": [
+        13,
+        -3,
+        -25,
+        20,
+        -3,
+        -16,
+        -23,
+        18,
+        20,
+        -7,
+        12,
+        -5,
+        -22,
+        15,
+        -4,
+        7
+      ],
+      "saida_esperada": {
+        "soma_maxima": 43,
+        "inicio": 7,
+        "fim": 10
+      }
+    },
+    {
+      "id": "E1-08",
+      "nome": "Vetor inteiramente positivo (Intervalo ótimo é o vetor completo)",
+      "justificativa": "Quando todas as variações diárias são estritamente positivas, o ganho máximo acumula todos os dias de 0 até n-1.",
+      "entrada_n": 6,
+      "entrada_vetor": [
+        4,
+        2,
+        9,
+        1,
+        5,
+        3
+      ],
+      "saida_esperada": {
+        "soma_maxima": 24,
+        "inicio": 0,
+        "fim": 5
+      }
+    },
+    {
+      "id": "E1-09",
+      "nome": "Vetor contendo apenas zeros",
+      "justificativa": "Caso degenerado em que todos os subarranjos possuem soma 0; pelo critério determinístico (menor início, menor fim), deve retornar o primeiro dia isolado [0, 0].",
+      "entrada_n": 4,
+      "entrada_vetor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "saida_esperada": {
+        "soma_maxima": 0,
+        "inicio": 0,
+        "fim": 0
+      }
+    },
+    {
+      "id": "E1-10",
+      "nome": "Ótimo estritamente no primeiro elemento ou no último elemento",
+      "justificativa": "Verifica ausência de erros off-by-one nos limites do vetor quando o ganho máximo está concentrado na borda direita.",
+      "entrada_n": 6,
+      "entrada_vetor": [
+        10,
+        -20,
+        3,
+        -5,
+        -8,
+        35
+      ],
+      "saida_esperada": {
+        "soma_maxima": 35,
+        "inicio": 5,
+        "fim": 5
+      }
+    }
+  ],
+  "etapa2_par_pontos_mais_proximos": [
+    {
+      "id": "E2-01",
+      "nome": "Caso mínimo absoluto (n = 2 estações)",
+      "justificativa": "Menor entrada válida possível; exercita diretamente o caso base sem divisões recursivas (triângulo 3-4-5, distância = 5.0).",
+      "entrada_n": 2,
+      "entrada_pontos": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          3.0,
+          4.0
+        ]
+      ],
+      "saida_esperada": {
+        "distancia": 5.0,
+        "ponto1": [
+          0.0,
+          0.0
+        ],
+        "ponto2": [
+          3.0,
+          4.0
+        ],
+        "indices": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "E2-02",
+      "nome": "Caso base de tamanho ímpar (n = 3 estações)",
+      "justificativa": "Verifica o tratamento de subproblemas de tamanho 3 no caso base da recursão.",
+      "entrada_n": 3,
+      "entrada_pontos": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          10.0,
+          10.0
+        ],
+        [
+          1.0,
+          1.0
+        ]
+      ],
+      "saida_esperada": {
+        "distancia": 1.414214,
+        "ponto1": [
+          0.0,
+          0.0
+        ],
+        "ponto2": [
+          1.0,
+          1.0
+        ],
+        "indices": [
+          0,
+          2
+        ]
+      }
+    },
+    {
+      "id": "E2-03",
+      "nome": "Par mais próximo cruzando a linha divisória central (Teste da Faixa 2*delta)",
+      "justificativa": "Metade esquerda tem menor distância delta = 10, metade direita tem delta = 10, mas há dois pontos de lados opostos da mediana x = 0 separados por apenas 0.4 unidades: (-0.2, 5.0) e (0.2, 5.0). Força a descoberta do ótimo na etapa de combinação da faixa.",
+      "entrada_n": 6,
+      "entrada_pontos": [
+        [
+          -10.0,
+          0.0
+        ],
+        [
+          -10.0,
+          10.0
+        ],
+        [
+          -0.2,
+          5.0
+        ],
+        [
+          0.2,
+          5.0
+        ],
+        [
+          10.0,
+          0.0
+        ],
+        [
+          10.0,
+          10.0
+        ]
+      ],
+      "saida_esperada": {
+        "distancia": 0.4,
+        "ponto1": [
+          -0.2,
+          5.0
+        ],
+        "ponto2": [
+          0.2,
+          5.0
+        ],
+        "indices": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "E2-04",
+      "nome": "Estações coincidentes (Distância Zero / Colisão)",
+      "justificativa": "Caso de borda geométrico em que duas estações possuem exatamente as mesmas coordenadas (delta = 0.0).",
+      "entrada_n": 5,
+      "entrada_pontos": [
+        [
+          2.5,
+          3.5
+        ],
+        [
+          10.0,
+          -4.0
+        ],
+        [
+          -5.0,
+          8.0
+        ],
+        [
+          2.5,
+          3.5
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "saida_esperada": {
+        "distancia": 0.0,
+        "ponto1": [
+          2.5,
+          3.5
+        ],
+        "ponto2": [
+          2.5,
+          3.5
+        ],
+        "indices": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "id": "E2-05",
+      "nome": "Pontos colineares sobre uma mesma reta vertical (Mesma coordenada X)",
+      "justificativa": "Caso degenerado crítico para algoritmos de divisão por mediana em X: todos os pontos têm x = 7.0, logo todos caem na faixa central de largura 2*delta = 2*d.",
+      "entrada_n": 5,
+      "entrada_pontos": [
+        [
+          7.0,
+          100.0
+        ],
+        [
+          7.0,
+          10.0
+        ],
+        [
+          7.0,
+          25.0
+        ],
+        [
+          7.0,
+          11.5
+        ],
+        [
+          7.0,
+          50.0
+        ]
+      ],
+      "saida_esperada": {
+        "distancia": 1.5,
+        "ponto1": [
+          7.0,
+          10.0
+        ],
+        "ponto2": [
+          7.0,
+          11.5
+        ],
+        "indices": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "id": "E2-06",
+      "nome": "Pontos colineares sobre uma mesma reta horizontal (Mesma coordenada Y)",
+      "justificativa": "Caso degenerado em que todos os pontos têm y = -3.0, testando a estabilidade da ordenação por Y e a poda na faixa.",
+      "entrada_n": 5,
+      "entrada_pontos": [
+        [
+          -20.0,
+          -3.0
+        ],
+        [
+          15.0,
+          -3.0
+        ],
+        [
+          4.2,
+          -3.0
+        ],
+        [
+          3.5,
+          -3.0
+        ],
+        [
+          50.0,
+          -3.0
+        ]
+      ],
+      "saida_esperada": {
+        "distancia": 0.7,
+        "ponto1": [
+          4.2,
+          -3.0
+        ],
+        "ponto2": [
+          3.5,
+          -3.0
+        ],
+        "indices": [
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "E2-07",
+      "nome": "Grade regular 3x3 com múltiplos empates de distância mínima",
+      "justificativa": "Em uma malha uniforme com passo 2.0, existem 12 pares adjacentes com distância mínima exata 2.0. Verifica se Força Bruta, D&C puro e D&C Híbrido desempatam exatamente no mesmo par (índices 0 e 1).",
+      "entrada_n": 9,
+      "entrada_pontos": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0
+        ],
+        [
+          0.0,
+          4.0
+        ],
+        [
+          2.0,
+          0.0
+        ],
+        [
+          2.0,
+          2.0
+        ],
+        [
+          2.0,
+          4.0
+        ],
+        [
+          4.0,
+          0.0
+        ],
+        [
+          4.0,
+          2.0
+        ],
+        [
+          4.0,
+          4.0
+        ]
+      ],
+      "saida_esperada": {
+        "distancia": 2.0,
+        "ponto1": [
+          0.0,
+          0.0
+        ],
+        "ponto2": [
+          0.0,
+          2.0
+        ],
+        "indices": [
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "id": "E2-08",
+      "nome": "Configuração densa na faixa central (Empacotamento limite de 8 pontos no retângulo delta x 2*delta)",
+      "justificativa": "Exercita a geometria limite da faixa central: 4 pontos no bordo esquerdo e 4 pontos no bordo direito formando dois quadrados de lado delta = 10, mais um ponto ligeiramente mais próximo na vertical (distância 9.5).",
+      "entrada_n": 8,
+      "entrada_pontos": [
+        [
+          -10.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -10.0,
+          10.0
+        ],
+        [
+          0.0,
+          10.0
+        ],
+        [
+          0.0,
+          0.5
+        ],
+        [
+          10.0,
+          0.5
+        ],
+        [
+          0.0,
+          10.0
+        ],
+        [
+          10.0,
+          9.5
+        ]
+      ],
+      "saida_esperada": {
+        "distancia": 0.0,
+        "ponto1": [
+          0.0,
+          10.0
+        ],
+        "ponto2": [
+          0.0,
+          10.0
+        ],
+        "indices": [
+          3,
+          6
+        ]
+      }
+    }
+  ]
+}
