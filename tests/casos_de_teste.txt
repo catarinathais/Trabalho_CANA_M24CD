@@ -1,0 +1,211 @@
+================================================================================
+ARQUIVO DE CASOS DE TESTE — TRABALHO PRÁTICO: DIVISÃO E CONQUISTA
+Autores: Catarina Pimentel e Hafiz Costa
+================================================================================
+
+CONVENÇÃO DE SAÍDA:
+- Etapa 1 (Subarranjo de Soma Máxima):
+  Entrada: inteiro n seguido de n inteiros.
+  Saída Esperada: <soma_maxima> <indice_inicio> <indice_fim> (índices 0-based)
+  Critério de desempate: maior soma -> menor índice de início -> menor índice de fim.
+
+- Etapa 2 (Par de Pontos Mais Próximos):
+  Entrada: inteiro n seguido de n pares de coordenadas (x, y).
+  Saída Esperada: <distancia_minima> (<x1>, <y1>) (<x2>, <y2>) [índices: <i1>, <i2>]
+
+--------------------------------------------------------------------------------
+ETAPA 1: SUBARRANJO DE SOMA MÁXIMA (10 CASOS DE TESTE)
+--------------------------------------------------------------------------------
+
+[E1-01] Vetor contendo apenas valores negativos (Caso de Borda Obrigatório 1)
+Justificativa: Verifica se o algoritmo não retorna 0 indevidamente quando todas as variações diárias são negativas; deve retornar o maior elemento isolado (menos negativo) e seus respectivos índices.
+Entrada:
+  6
+  -15 -8 -23 -3 -12 -9
+Saída Esperada:
+  Soma Máxima = -3 | Início = 3 | Fim = 3
+  Formato curto: -3 3 3
+
+[E1-02] Vetor contendo apenas valores negativos com empate (Borda Negativos + Empate)
+Justificativa: Combina dois casos de borda: todos os valores negativos e múltiplos elementos empatados com o maior valor (-4 nos índices 1 e 4). Pela regra determinística de desempate (menor índice de início), deve retornar [1, 1].
+Entrada:
+  5
+  -10 -4 -7 -12 -4
+Saída Esperada:
+  Soma Máxima = -4 | Início = 1 | Fim = 1
+  Formato curto: -4 1 1
+
+[E1-03] Vetor de tamanho 1 positivo (Caso de Borda Obrigatório 2)
+Justificativa: Testa a condição de parada imediata da recursão (esq == dir) com um único elemento positivo.
+Entrada:
+  1
+  42
+Saída Esperada:
+  Soma Máxima = 42 | Início = 0 | Fim = 0
+  Formato curto: 42 0 0
+
+[E1-04] Vetor de tamanho 1 negativo (Caso de Borda Obrigatório 2 - Variante)
+Justificativa: Testa o caso base mínimo (n = 1) quando o único dia registrado teve queda no preço da ação.
+Entrada:
+  1
+  -17
+Saída Esperada:
+  Soma Máxima = -17 | Início = 0 | Fim = 0
+  Formato curto: -17 0 0
+
+[E1-05] Empate entre intervalos disjuntos com a mesma soma máxima (Caso de Borda Obrigatório 3)
+Justificativa: Os subarranjos [0..1] = (6+4=10) e [3..4] = (3+7=10) possuem a mesma soma máxima (10), separados por uma queda brusca (-25). O critério de desempate seleciona o primeiro intervalo [0, 1].
+Entrada:
+  5
+  6 4 -25 3 7
+Saída Esperada:
+  Soma Máxima = 10 | Início = 0 | Fim = 1
+  Formato curto: 10 0 1
+
+[E1-06] Empate por elementos nulos nas extremidades (Mesmo início, comprimentos diferentes)
+Justificativa: Avalia o segundo nível de desempate: os intervalos [1..2] (5+7=12) e [1..3] (5+7+0=12) têm mesma soma e mesmo início (1). O critério de menor índice final escolhe o intervalo mais enxuto [1, 2].
+Entrada:
+  5
+  -3 5 7 0 -4
+Saída Esperada:
+  Soma Máxima = 12 | Início = 1 | Fim = 2
+  Formato curto: 12 1 2
+
+[E1-07] Subarranjo ótimo cruzando exatamente a mediana (Clássico CLRS)
+Justificativa: Instância clássica de Cormen et al. (16 dias) em que o subarranjo ótimo [7..10] = (18 + 20 - 7 + 12 = 43) cruza o ponto médio da divisão principal, validando a etapa de combinação O(n).
+Entrada:
+  16
+  13 -3 -25 20 -3 -16 -23 18 20 -7 12 -5 -22 15 -4 7
+Saída Esperada:
+  Soma Máxima = 43 | Início = 7 | Fim = 10
+  Formato curto: 43 7 10
+
+[E1-08] Vetor inteiramente positivo (Intervalo ótimo é o vetor completo)
+Justificativa: Quando todas as variações diárias são estritamente positivas, o ganho máximo acumula todos os dias de 0 até n-1.
+Entrada:
+  6
+  4 2 9 1 5 3
+Saída Esperada:
+  Soma Máxima = 24 | Início = 0 | Fim = 5
+  Formato curto: 24 0 5
+
+[E1-09] Vetor contendo apenas zeros
+Justificativa: Caso degenerado em que todos os subarranjos possuem soma 0; pelo critério determinístico (menor início, menor fim), deve retornar o primeiro dia isolado [0, 0].
+Entrada:
+  4
+  0 0 0 0
+Saída Esperada:
+  Soma Máxima = 0 | Início = 0 | Fim = 0
+  Formato curto: 0 0 0
+
+[E1-10] Ótimo estritamente no primeiro elemento ou no último elemento
+Justificativa: Verifica ausência de erros off-by-one nos limites do vetor quando o ganho máximo está concentrado na borda direita.
+Entrada:
+  6
+  10 -20 3 -5 -8 35
+Saída Esperada:
+  Soma Máxima = 35 | Início = 5 | Fim = 5
+  Formato curto: 35 5 5
+
+--------------------------------------------------------------------------------
+ETAPA 2: PAR DE PONTOS MAIS PRÓXIMOS (8 CASOS DE TESTE)
+--------------------------------------------------------------------------------
+
+[E2-01] Caso mínimo absoluto (n = 2 estações)
+Justificativa: Menor entrada válida possível; exercita diretamente o caso base sem divisões recursivas (triângulo 3-4-5, distância = 5.0).
+Entrada:
+  2
+  0.0 0.0
+  3.0 4.0
+Saída Esperada:
+  Distância Mínima = 5.000000 | Ponto 1 = (0.0, 0.0) | Ponto 2 = (3.0, 4.0) | Índices = (0, 1)
+
+[E2-02] Caso base de tamanho ímpar (n = 3 estações)
+Justificativa: Verifica o tratamento de subproblemas de tamanho 3 no caso base da recursão.
+Entrada:
+  3
+  0.0 0.0
+  10.0 10.0
+  1.0 1.0
+Saída Esperada:
+  Distância Mínima = 1.414214 | Ponto 1 = (0.0, 0.0) | Ponto 2 = (1.0, 1.0) | Índices = (0, 2)
+
+[E2-03] Par mais próximo cruzando a linha divisória central (Teste da Faixa 2*delta)
+Justificativa: Metade esquerda tem menor distância delta = 10, metade direita tem delta = 10, mas há dois pontos de lados opostos da mediana x = 0 separados por apenas 0.4 unidades: (-0.2, 5.0) e (0.2, 5.0). Força a descoberta do ótimo na etapa de combinação da faixa.
+Entrada:
+  6
+  -10.0 0.0
+  -10.0 10.0
+  -0.2 5.0
+  0.2 5.0
+  10.0 0.0
+  10.0 10.0
+Saída Esperada:
+  Distância Mínima = 0.400000 | Ponto 1 = (-0.2, 5.0) | Ponto 2 = (0.2, 5.0) | Índices = (2, 3)
+
+[E2-04] Estações coincidentes (Distância Zero / Colisão)
+Justificativa: Caso de borda geométrico em que duas estações possuem exatamente as mesmas coordenadas (delta = 0.0).
+Entrada:
+  5
+  2.5 3.5
+  10.0 -4.0
+  -5.0 8.0
+  2.5 3.5
+  0.0 0.0
+Saída Esperada:
+  Distância Mínima = 0.000000 | Ponto 1 = (2.5, 3.5) | Ponto 2 = (2.5, 3.5) | Índices = (0, 3)
+
+[E2-05] Pontos colineares sobre uma mesma reta vertical (Mesma coordenada X)
+Justificativa: Caso degenerado crítico para algoritmos de divisão por mediana em X: todos os pontos têm x = 7.0, logo todos caem na faixa central de largura 2*delta = 2*d.
+Entrada:
+  5
+  7.0 100.0
+  7.0 10.0
+  7.0 25.0
+  7.0 11.5
+  7.0 50.0
+Saída Esperada:
+  Distância Mínima = 1.500000 | Ponto 1 = (7.0, 10.0) | Ponto 2 = (7.0, 11.5) | Índices = (1, 3)
+
+[E2-06] Pontos colineares sobre uma mesma reta horizontal (Mesma coordenada Y)
+Justificativa: Caso degenerado em que todos os pontos têm y = -3.0, testando a estabilidade da ordenação por Y e a poda na faixa.
+Entrada:
+  5
+  -20.0 -3.0
+  15.0 -3.0
+  4.2 -3.0
+  3.5 -3.0
+  50.0 -3.0
+Saída Esperada:
+  Distância Mínima = 0.700000 | Ponto 1 = (4.2, -3.0) | Ponto 2 = (3.5, -3.0) | Índices = (2, 3)
+
+[E2-07] Grade regular 3x3 com múltiplos empates de distância mínima
+Justificativa: Em uma malha uniforme com passo 2.0, existem 12 pares adjacentes com distância mínima exata 2.0. Verifica se Força Bruta, D&C puro e D&C Híbrido desempatam exatamente no mesmo par (índices 0 e 1).
+Entrada:
+  9
+  0.0 0.0
+  0.0 2.0
+  0.0 4.0
+  2.0 0.0
+  2.0 2.0
+  2.0 4.0
+  4.0 0.0
+  4.0 2.0
+  4.0 4.0
+Saída Esperada:
+  Distância Mínima = 2.000000 | Ponto 1 = (0.0, 0.0) | Ponto 2 = (0.0, 2.0) | Índices = (0, 1)
+
+[E2-08] Configuração densa na faixa central (Empacotamento limite de 8 pontos no retângulo delta x 2*delta)
+Justificativa: Exercita a geometria limite da faixa central: 4 pontos no bordo esquerdo e 4 pontos no bordo direito formando dois quadrados de lado delta = 10, mais um ponto ligeiramente mais próximo na vertical (distância 9.5).
+Entrada:
+  8
+  -10.0 0.0
+  0.0 0.0
+  -10.0 10.0
+  0.0 10.0
+  0.0 0.5
+  10.0 0.5
+  0.0 10.0
+  10.0 9.5
+Saída Esperada:
+  Distância Mínima = 0.000000 | Ponto 1 = (0.0, 10.0) | Ponto 2 = (0.0, 10.0) | Índices = (3, 6)
