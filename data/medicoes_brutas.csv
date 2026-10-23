@@ -1,0 +1,281 @@
+etapa,algoritmo,n,limiar,execucao,tempo_ms,resultado_verificacao
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),100,-,1,0.549228,6203
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),100,-,1,0.091122,6203
+Etapa 1 - Subarranjo,Kadane Desafio O(n),100,-,1,0.015856,6203
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),100,-,2,0.506109,6526
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),100,-,2,0.076932,6526
+Etapa 1 - Subarranjo,Kadane Desafio O(n),100,-,2,0.011771,6526
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),100,-,3,0.557074,6724
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),100,-,3,0.074615,6724
+Etapa 1 - Subarranjo,Kadane Desafio O(n),100,-,3,0.010795,6724
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),100,-,4,0.564692,2579
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),100,-,4,0.075088,2579
+Etapa 1 - Subarranjo,Kadane Desafio O(n),100,-,4,0.011314,2579
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),100,-,5,0.465962,7450
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),100,-,5,0.069852,7450
+Etapa 1 - Subarranjo,Kadane Desafio O(n),100,-,5,0.010516,7450
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),200,-,1,1.893289,12226
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),200,-,1,0.158082,12226
+Etapa 1 - Subarranjo,Kadane Desafio O(n),200,-,1,0.020273,12226
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),200,-,2,1.865628,14412
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),200,-,2,0.149292,14412
+Etapa 1 - Subarranjo,Kadane Desafio O(n),200,-,2,0.020841,14412
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),200,-,3,1.8355,8978
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),200,-,3,0.154823,8978
+Etapa 1 - Subarranjo,Kadane Desafio O(n),200,-,3,0.020651,8978
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),200,-,4,1.880916,13336
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),200,-,4,0.165083,13336
+Etapa 1 - Subarranjo,Kadane Desafio O(n),200,-,4,0.021341,13336
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),200,-,5,1.911526,9350
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),200,-,5,0.159006,9350
+Etapa 1 - Subarranjo,Kadane Desafio O(n),200,-,5,0.021328,9350
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),400,-,1,7.875168,11251
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),400,-,1,0.358918,11251
+Etapa 1 - Subarranjo,Kadane Desafio O(n),400,-,1,0.040927,11251
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),400,-,2,7.710131,10997
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),400,-,2,0.345347,10997
+Etapa 1 - Subarranjo,Kadane Desafio O(n),400,-,2,0.040189,10997
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),400,-,3,7.710347,33461
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),400,-,3,0.340948,33461
+Etapa 1 - Subarranjo,Kadane Desafio O(n),400,-,3,0.040773,33461
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),400,-,4,7.649075,8100
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),400,-,4,0.327606,8100
+Etapa 1 - Subarranjo,Kadane Desafio O(n),400,-,4,0.042693,8100
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),400,-,5,7.720248,7949
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),400,-,5,0.351028,7949
+Etapa 1 - Subarranjo,Kadane Desafio O(n),400,-,5,0.041618,7949
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),800,-,1,30.957389,26065
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),800,-,1,0.763812,26065
+Etapa 1 - Subarranjo,Kadane Desafio O(n),800,-,1,0.083199,26065
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),800,-,2,30.940127,14866
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),800,-,2,0.741416,14866
+Etapa 1 - Subarranjo,Kadane Desafio O(n),800,-,2,0.084057,14866
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),800,-,3,30.903617,33860
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),800,-,3,0.716444,33860
+Etapa 1 - Subarranjo,Kadane Desafio O(n),800,-,3,0.078181,33860
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),800,-,4,30.132539,11402
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),800,-,4,0.650113,11402
+Etapa 1 - Subarranjo,Kadane Desafio O(n),800,-,4,0.075283,11402
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),800,-,5,30.20161,16610
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),800,-,5,0.69052,16610
+Etapa 1 - Subarranjo,Kadane Desafio O(n),800,-,5,0.08194,16610
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),1600,-,1,121.884416,20976
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),1600,-,1,1.409813,20976
+Etapa 1 - Subarranjo,Kadane Desafio O(n),1600,-,1,0.159813,20976
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),1600,-,2,121.653227,39005
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),1600,-,2,1.429299,39005
+Etapa 1 - Subarranjo,Kadane Desafio O(n),1600,-,2,0.158088,39005
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),1600,-,3,121.531441,48427
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),1600,-,3,1.434012,48427
+Etapa 1 - Subarranjo,Kadane Desafio O(n),1600,-,3,0.171145,48427
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),1600,-,4,120.875549,10227
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),1600,-,4,1.419581,10227
+Etapa 1 - Subarranjo,Kadane Desafio O(n),1600,-,4,0.161644,10227
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),1600,-,5,120.012537,32513
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),1600,-,5,1.324958,32513
+Etapa 1 - Subarranjo,Kadane Desafio O(n),1600,-,5,0.152335,32513
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),3200,-,1,522.554255,32585
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),3200,-,1,3.014929,32585
+Etapa 1 - Subarranjo,Kadane Desafio O(n),3200,-,1,0.331633,32585
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),3200,-,2,484.545717,73396
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),3200,-,2,2.9516,73396
+Etapa 1 - Subarranjo,Kadane Desafio O(n),3200,-,2,0.315416,73396
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),3200,-,3,492.745055,46664
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),3200,-,3,2.758328,46664
+Etapa 1 - Subarranjo,Kadane Desafio O(n),3200,-,3,0.313144,46664
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),3200,-,4,484.603232,32139
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),3200,-,4,2.952102,32139
+Etapa 1 - Subarranjo,Kadane Desafio O(n),3200,-,4,0.336561,32139
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),3200,-,5,487.76992,34674
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),3200,-,5,2.955194,34674
+Etapa 1 - Subarranjo,Kadane Desafio O(n),3200,-,5,0.338585,34674
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),6400,-,1,1935.692974,99112
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),6400,-,1,6.035675,99112
+Etapa 1 - Subarranjo,Kadane Desafio O(n),6400,-,1,0.626289,99112
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),6400,-,2,1929.135327,20307
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),6400,-,2,6.155247,20307
+Etapa 1 - Subarranjo,Kadane Desafio O(n),6400,-,2,0.64216,20307
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),6400,-,3,1937.454038,32025
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),6400,-,3,6.139045,32025
+Etapa 1 - Subarranjo,Kadane Desafio O(n),6400,-,3,0.650789,32025
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),6400,-,4,1940.29733,39428
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),6400,-,4,5.845722,39428
+Etapa 1 - Subarranjo,Kadane Desafio O(n),6400,-,4,0.602734,39428
+Etapa 1 - Subarranjo,Forca Bruta O(n^2),6400,-,5,1959.595142,64409
+Etapa 1 - Subarranjo,Divisao e Conquista O(n log n),6400,-,5,5.982673,64409
+Etapa 1 - Subarranjo,Kadane Desafio O(n),6400,-,5,0.602529,64409
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),100,-,1,0.673653,151.942666
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],100,3,1,0.399806,151.942666
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],100,24,1,0.204976,151.942666
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),100,-,2,0.614062,117.432126
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],100,3,2,0.245463,117.432126
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],100,24,2,0.207607,117.432126
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),100,-,3,0.616908,120.618494
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],100,3,3,0.261124,120.618494
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],100,24,3,0.173368,120.618494
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),100,-,4,0.613998,104.173561
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],100,3,4,0.279147,104.173561
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],100,24,4,0.178938,104.173561
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),100,-,5,0.628784,31.67508
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],100,3,5,0.26176,31.67508
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],100,24,5,0.185574,31.67508
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),200,-,1,2.608754,84.911755
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],200,3,1,0.592943,84.911755
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],200,24,1,0.431366,84.911755
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),200,-,2,2.598044,19.398179
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],200,3,2,0.593755,19.398179
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],200,24,2,0.419851,19.398179
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),200,-,3,2.603819,96.393496
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],200,3,3,0.581614,96.393496
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],200,24,3,0.419167,96.393496
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),200,-,4,2.511099,125.561434
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],200,3,4,0.593329,125.561434
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],200,24,4,0.402821,125.561434
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),200,-,5,2.444325,127.798089
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],200,3,5,0.559406,127.798089
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],200,24,5,0.406701,127.798089
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),400,-,1,10.216146,33.891744
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],400,3,1,1.290522,33.891744
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],400,24,1,0.877202,33.891744
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),400,-,2,10.376163,29.810858
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],400,3,2,1.309074,29.810858
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],400,24,2,0.900444,29.810858
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),400,-,3,10.627633,57.186644
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],400,3,3,1.259354,57.186644
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],400,24,3,0.943643,57.186644
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),400,-,4,10.573463,32.578033
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],400,3,4,1.267796,32.578033
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],400,24,4,0.940069,32.578033
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),400,-,5,10.200911,32.66744
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],400,3,5,1.245423,32.66744
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],400,24,5,0.861988,32.66744
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),800,-,1,41.583855,23.000578
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],800,3,1,2.753579,23.000578
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],800,24,1,1.941038,23.000578
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),800,-,2,42.397116,9.498776
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],800,3,2,2.760547,9.498776
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],800,24,2,1.979991,9.498776
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),800,-,3,42.051761,10.613496
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],800,3,3,2.742531,10.613496
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],800,24,3,2.0511,10.613496
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),800,-,4,41.54214,10.650502
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],800,3,4,2.710505,10.650502
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],800,24,4,2.02191,10.650502
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),800,-,5,41.225196,26.325684
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],800,3,5,2.754681,26.325684
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],800,24,5,2.051908,26.325684
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),1600,-,1,167.41878,10.213836
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],1600,3,1,5.792438,10.213836
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],1600,24,1,4.335366,10.213836
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),1600,-,2,169.393357,5.777029
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],1600,3,2,6.37431,5.777029
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],1600,24,2,4.672915,5.777029
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),1600,-,3,168.965524,6.282453
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],1600,3,3,5.896182,6.282453
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],1600,24,3,4.302141,6.282453
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),1600,-,4,165.825401,4.888247
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],1600,3,4,6.136776,4.888247
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],1600,24,4,4.574298,4.888247
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),1600,-,5,171.051004,5.487067
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],1600,3,5,5.693631,5.487067
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],1600,24,5,4.595251,5.487067
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),3200,-,1,675.131859,3.652784
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],3200,3,1,13.032768,3.652784
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],3200,24,1,10.14819,3.652784
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),3200,-,2,670.324377,1.905077
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],3200,3,2,12.65689,1.905077
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],3200,24,2,10.159823,1.905077
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),3200,-,3,675.146406,1.443886
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],3200,3,3,13.1059,1.443886
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],3200,24,3,9.669993,1.443886
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),3200,-,4,674.819679,5.155675
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],3200,3,4,13.278052,5.155675
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],3200,24,4,9.982609,5.155675
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),3200,-,5,677.190057,2.85797
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],3200,3,5,12.995323,2.85797
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],3200,24,5,10.015861,2.85797
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),6400,-,1,2679.322857,3.498944
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],6400,3,1,28.011668,3.498944
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],6400,24,1,21.833303,3.498944
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),6400,-,2,2693.920705,1.946249
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],6400,3,2,27.509205,1.946249
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],6400,24,2,22.157624,1.946249
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),6400,-,3,2846.604501,1.075665
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],6400,3,3,26.970237,1.075665
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],6400,24,3,22.695621,1.075665
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),6400,-,4,2701.538823,3.015023
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],6400,3,4,27.649015,3.015023
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],6400,24,4,21.996837,3.015023
+Etapa 2 - Par Mais Proximo,Forca Bruta O(n^2),6400,-,5,2699.056879,4.266673
+Etapa 2 - Par Mais Proximo,Divisao e Conquista O(n log n) [limiar=3],6400,3,5,27.752627,4.266673
+Etapa 2 - Par Mais Proximo,D&C Hibrido O(n log n) [limiar=24],6400,24,5,22.719589,4.266673
+Calibracao Limiar Etapa 2,D&C com limiar=3,3200,3,1,13.466716,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=3,3200,3,2,13.406003,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=3,3200,3,3,13.439869,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=3,3200,3,4,13.396128,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=3,3200,3,5,12.675399,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=4,3200,4,1,12.79375,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=4,3200,4,2,12.932009,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=4,3200,4,3,13.81611,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=4,3200,4,4,12.680581,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=4,3200,4,5,12.850318,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=6,3200,6,1,11.601328,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=6,3200,6,2,11.674731,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=6,3200,6,3,11.031812,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=6,3200,6,4,11.524663,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=6,3200,6,5,11.690083,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=8,3200,8,1,11.184938,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=8,3200,8,2,10.748183,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=8,3200,8,3,10.955008,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=8,3200,8,4,10.944186,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=8,3200,8,5,11.195365,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=12,3200,12,1,10.72629,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=12,3200,12,2,10.408831,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=12,3200,12,3,10.955081,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=12,3200,12,4,10.846229,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=12,3200,12,5,10.693017,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=16,3200,16,1,10.378837,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=16,3200,16,2,10.476014,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=16,3200,16,3,10.454339,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=16,3200,16,4,11.204272,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=16,3200,16,5,10.389007,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=24,3200,24,1,10.384207,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=24,3200,24,2,10.45835,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=24,3200,24,3,10.51595,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=24,3200,24,4,10.176089,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=24,3200,24,5,9.786622,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=32,3200,32,1,10.775286,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=32,3200,32,2,11.449485,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=32,3200,32,3,11.526402,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=32,3200,32,4,11.099961,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=32,3200,32,5,11.271181,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=48,3200,48,1,11.696277,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=48,3200,48,2,11.745806,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=48,3200,48,3,11.500068,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=48,3200,48,4,11.296455,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=48,3200,48,5,11.166691,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=64,3200,64,1,15.666367,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=64,3200,64,2,15.598243,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=64,3200,64,3,15.744911,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=64,3200,64,4,16.831239,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=64,3200,64,5,15.678488,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=96,3200,96,1,15.788318,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=96,3200,96,2,15.618613,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=96,3200,96,3,15.399445,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=96,3200,96,4,15.369565,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=96,3200,96,5,15.792911,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=128,3200,128,1,25.291498,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=128,3200,128,2,25.56415,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=128,3200,128,3,25.707737,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=128,3200,128,4,26.109416,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=128,3200,128,5,25.642737,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=192,3200,192,1,25.97359,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=192,3200,192,2,25.416993,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=192,3200,192,3,25.698212,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=192,3200,192,4,25.804726,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=192,3200,192,5,25.713651,3.151837
+Calibracao Limiar Etapa 2,D&C com limiar=256,3200,256,1,45.863112,1.219207
+Calibracao Limiar Etapa 2,D&C com limiar=256,3200,256,2,45.961085,2.685671
+Calibracao Limiar Etapa 2,D&C com limiar=256,3200,256,3,47.200742,5.059
+Calibracao Limiar Etapa 2,D&C com limiar=256,3200,256,4,46.211588,3.236709
+Calibracao Limiar Etapa 2,D&C com limiar=256,3200,256,5,45.161186,3.151837
